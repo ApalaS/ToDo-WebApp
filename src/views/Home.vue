@@ -177,7 +177,7 @@ export default {
     async onDelete(key) {
       console.log(key);
       const data = [...this.data];
-      this.data = data.filter((item) => item.task !== key.task);
+      this.data = data.filter((item) => item.id !== key.id);
       await deleteDoc(doc(firebase.db, "tasks", key.id));
     },
   },
